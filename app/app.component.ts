@@ -5,6 +5,8 @@ import { HeroDetailComponent } from './hero-detail.component';
 
 import { DashboardComponent } from './dashboard.component';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
+import { HeroFormComponent } from './hero-form.component';
+import { WikiSmartComponent } from './wiki-smart.component';
 
 @RouteConfig([
   {
@@ -22,6 +24,16 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/route
     path: '/heroes',
     name: 'Heroes',
     component: HeroesComponent
+  },
+  {
+    path: '/form',
+    name: 'Heroform',
+    component: HeroFormComponent
+  },
+  {
+    path: '/wiki',
+    name: 'Wiki',
+    component: WikiSmartComponent
   }
 ])
 
@@ -32,6 +44,8 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/route
     <nav>
       <a [routerLink]="['Dashboard']">Dashboard</a>
       <a [routerLink]="['Heroes']">Heroes</a>
+      <a [routerLink]="['Heroform']">HeroForm</a>
+      <a [routerLink]="['Wiki']">WikiSearch</a>
     </nav>
     <router-outlet></router-outlet>
   `,
