@@ -74,7 +74,4 @@ export class HeroService {
     return this.post(hero);
   }
 
-
-
-
 }
